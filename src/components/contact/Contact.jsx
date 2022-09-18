@@ -7,8 +7,6 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const [buttonText, setButtonText] = useState('Send Message');
-
   const form = useRef()
   const sendEmail = (e) => {
     e.preventDefault();
@@ -16,7 +14,6 @@ const Contact = () => {
     emailjs.sendForm('service_zpwtzqj', 'template_lgrhsft', form.current, 'Ow4k9CRaZ530VyNQM')
       .then((result) => {
           console.log(result.text);
-          setButtonText("test")
       }, (error) => {
           console.log(error.text);
       });

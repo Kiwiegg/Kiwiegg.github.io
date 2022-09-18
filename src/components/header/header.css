@@ -1,0 +1,114 @@
+header {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.header__main__container {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    padding: 0 1rem 0 1rem;
+}
+
+.header__main__container > h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+} 
+
+.description__text {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.3rem;
+} 
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header_socials > a{
+    font-size: 1.3rem;
+}
+
+
+.header_socials::after {
+    content: '';
+    width: 1px;
+    height: 3rem;
+    background: var(--color-primary);
+}
+
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.arrow::after {
+    display: inline-block;
+    padding-left: 8px;
+    content: "\0279E"; 
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+
+.arrow:hover::after {
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    -webkit-transform: translateX(6px);
+    -moz-transform: translateX(6px);
+    -ms-transform: translateX(6px);
+    -o-transform: translateX(6px);
+    transform: translateX(6px);
+}
+
+/* =============== Media Queries (MEDIUM SCREENS) ================ */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 100vh;
+    }
+}
+
+/* =============== Media Queries (SMALL SCREENS) ================ */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+     
+    .header_socials, .scroll__down {
+        display: none;
+    }
+
+    .header__main__container > h1 {
+        font-size: 4rem;
+    } 
+}
